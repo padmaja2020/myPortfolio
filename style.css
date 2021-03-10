@@ -760,6 +760,9 @@ button:focus {
   .contact-top-single {
     margin-bottom: 25px;
   }
+  .portfolio-content .col-xs-6 {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
