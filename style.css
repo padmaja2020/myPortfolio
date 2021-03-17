@@ -50,6 +50,7 @@ h6 {
 
 h1 {
   font-size: 38px;
+
 }
 
 h2 {
@@ -141,6 +142,62 @@ button:focus {
   border: none;
 }
 
+/* Case Study */
+
+.case-heading {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+flex-direction: row;
+margin-top: 20px;
+  padding-top: 20px;
+  height: 200px;
+}
+.main-content {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+  padding: 10px;
+}
+.overview {
+  background-color: white;
+}
+
+.challenges {
+  height: 350px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.approach-content {
+  flex: 0 0 50%;
+}
+.approach-img {
+  flex: 0 0 50%;
+  display: flex;
+}
+.imgclass {
+  padding: 30px;
+   margin-top: 20px;
+  margin-bottom: 30px;
+ border: 5px solid black;
+margin-left: 150px;
+  width: 70%;
+}
+.purpose {
+  justify-content: flex-end;
+}
+
 /* ========= BUTTON =========*/
 
 .primary-btn {
@@ -199,7 +256,10 @@ button:focus {
   position: fixed;
   padding: 15px 0;
 }
-
+.my_name {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+}
 /*--------------------*/
 /* MENU */
 /*--------------------*/
@@ -322,21 +382,24 @@ button:focus {
 /* ABOUT US */
 /*--------------------*/
 
-#about {
+#about,
+#case-study {
   background-color: #f7f7f7;
   display: inline;
   float: left;
   width: 100%;
 }
 
-.about-area {
+.about-area,
+.casestudy-area {
   display: inline;
   float: left;
   padding: 100px 0;
   width: 100%;
 }
 
-.about-header {
+.about-header,
+.casestudy-header {
   display: inline;
   float: left;
   text-align: center;
@@ -493,6 +556,7 @@ button:focus {
   padding: 16px;
   font-size: 18px;
   letter-spacing: 1px;
+  height: 200px;
 }
 
 .filtr-item h4 {
@@ -522,6 +586,7 @@ button:focus {
   float: left;
   overflow: hidden;
   width: 100%;
+  height: 500px;
 }
 
 .item-thumbonail img {
@@ -556,6 +621,9 @@ button:focus {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+}
+.filter-casestudy {
+  width: 100px;
 }
 
 .filter-link:hover,
@@ -656,6 +724,7 @@ button:focus {
 
 .copy-right {
   margin-bottom: 0;
+  color: #ee6e73;
 }
 
 .copy-right a {
@@ -682,10 +751,18 @@ button:focus {
   .about-content-right {
     margin-top: 0;
   }
-
-  .skill-progress-bar h3 {
-    margin-top: 0;
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
   }
+  .imgclass{
+    width:auto;
+  }
+
+  /* .skill-progress-bar h3 {
+    margin-top: 0;
+  } */
 }
 
 @media (max-width: 991px) {
@@ -727,6 +804,14 @@ button:focus {
   .contact-content {
     padding: 0 50px;
   }
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -763,6 +848,14 @@ button:focus {
   .portfolio-content .col-xs-6 {
     width: 100%;
   }
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -770,7 +863,7 @@ button:focus {
     padding: 10px 0;
   }
 
-  .featured-slider-content {
+  /* .featured-slider-content {
     left: 0;
     right: 0;
     bottom: 0;
@@ -785,7 +878,7 @@ button:focus {
 
   .featured-slider-content p {
     font-size: 12px;
-  }
+  } */
 
   .primary-btn {
     font-size: 12px;
@@ -795,6 +888,14 @@ button:focus {
 
   .slick-dots {
     bottom: 15px;
+  }
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
   }
 }
 
@@ -830,8 +931,16 @@ button:focus {
     margin-bottom: 18px;
   }
 
-  .contact-form button {
+  /* .contact-form button {
     width: 100%;
+  } */
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
   }
 
   .filtr-item h4 {
@@ -856,19 +965,22 @@ button:focus {
 }
 
 @media (max-width: 360px) {
-  .featured-slider-content {
+  /* .featured-slider-content {
     top: 49%;
-  }
+  } */
 
-  .featured-slider-content p,
+  /* .featured-slider-content p,
   .featured-slider-content .primary-btn {
     display: none;
-  }
+  } */
 
-  .featured-slider-content h2 {
+  .primary-btn {
+    display: none;
+  }
+  /* .featured-slider-content h2 {
     font-size: 18px;
     margin-bottom: 0;
-  }
+  } */
 
   .filter-item-content {
     padding-top: 25%;
@@ -892,7 +1004,25 @@ button:focus {
   .contact-content {
     padding: 0;
   }
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
+  }
 }
 
 @media (max-width: 320px) {
+  .main-container{
+    height: auto;
+    padding-bottom:20px;
+    width:100%;
+  }
+  .imgclass{
+    width:auto;
+  }
 }
+
+
